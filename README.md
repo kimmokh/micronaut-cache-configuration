@@ -1,6 +1,4 @@
-## Micronaut cache configuration
-
-Example 
+## Micronaut cache configuration: Caffeine vs. Service Discovery
 
 If an application uses both service discovery w/ cache and Caffeine caching, a `NonUniqueBeanException` is thrown during startup since `DefaultCacheConfiguration` and `DiscoveryClientCacheConfiguration` implement `CacheConfiguration`:
   
