@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: cacheconfig
+  caches:
+    someservice:
+      initial-capacity: 100
+      maximum-size: 1000
+      expire-after-write: 10m
+      expire-after-access: 10m
+    discovery-client:
+      enabled: true
+      expire-after-access: 30s
+    http:
+      services:
+        enabled: true
+        someservice:
+          urls:
+            - "https://expired.badssl.com/"
+            - "https://untrusted-root.badssl.com/"
+            - "https://revoked.badssl.com/"
